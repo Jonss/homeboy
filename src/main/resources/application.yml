@@ -3,9 +3,9 @@ spring:
   application:
     name: homeboy
   datasource:
-    url: 
-    username:
-    password:
+    url: postgres://hdhbnuiexygjut:35f9fd141ee84153208c5253bd5231091b06c39a303079b011847ff2e3beeebd@ec2-107-20-214-99.compute-1.amazonaws.com:5432/deemb2scn20hb8
+    username: hdhbnuiexygjut
+    password: 35f9fd141ee84153208c5253bd5231091b06c39a303079b011847ff2e3beeebd
     driverClassName: org.postgresql.Driver
     maxActive: 10
     maxIdle: 5
