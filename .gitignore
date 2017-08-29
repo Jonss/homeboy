@@ -3,4 +3,3 @@ homeboy.iml
 target
 src/test/
 target/
-src/main/resources/application.yml
