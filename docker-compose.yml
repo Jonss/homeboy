@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:8080"
     links:
-      - mysql:mysql_greendog
+      - mysql:mysql_homeboy
     environment:
           JAVA_ENV: "development"
 
