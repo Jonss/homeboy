@@ -52,10 +52,11 @@ public class HomeBoyAPIController {
         }
 
         if(text.equals(FLW.toString())) {
-            WorkRegister workRegister = workRegisterRepository.findTop1ByUserId(userId);
+            WorkRegister workRegister = workRegisterRepository.findTopOneByUserIdOrderByArrivalTimeDesc(userId);
             workRegister.setDepartureTime(TimeUtil.nowInSaoPaulo());
+            LOG.info(String.format("%s said FLW at %s", workRegister.getUserName(), TimeUtil.timeToString(workRegister.getDepartureTime())));
             workRegisterRepository.save(workRegister);
-            return String.format("Saída registrada, %s. Até amanhã.", workRegister.getUserName());
+            return String.format("Saída registrada. Até amanhã %s.", workRegister.getUserName());
         }
 
         if(text.equals(XOVE.toString())) {
