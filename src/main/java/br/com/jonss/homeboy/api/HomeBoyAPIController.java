@@ -69,7 +69,7 @@ public class HomeBoyAPIController {
     private String cleanValue(Object valueMap) {
         return valueMap.toString()
                 .replaceAll("]", "")
-                .replaceAll("\\[", "");
+                .replaceAll("\\[", "").trim();
     }
 
 }

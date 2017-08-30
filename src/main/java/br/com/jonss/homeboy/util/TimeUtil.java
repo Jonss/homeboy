@@ -11,8 +11,12 @@ public class TimeUtil {
         return instant.toLocalDateTime();
     }
 
-    public static String localDateToString(LocalDateTime localDateTime) {
-        return localDateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm"));
+    public static String dateToString(LocalDateTime localDateTime) {
+        return localDateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    public static String timeToString(LocalDateTime localDateTime) {
+        return localDateTime.format(DateTimeFormatter.ofPattern("hh:mm"));
     }
 
     public static LocalDateTime januaryAtMidnight() {

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  api_homeboy:
+    build: .
+    ports:
+      - "3000:8080"
+    links:
+      - mysql:mysql_greendog
+    environment:
+          JAVA_ENV: "development"
+
+  mysql:
+    image: mysql
+    container_name: mysql_homeboy
+    ports:
+     - "3060:3306"
+    environment:
+     MYSQL_ROOT_PASSWORD: "root"
+     MYSQL_DATABASE: "homeboy"

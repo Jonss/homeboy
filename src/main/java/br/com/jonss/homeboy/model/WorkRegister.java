@@ -63,6 +63,9 @@ public class WorkRegister {
 
     @Override
     public String toString() {
-        return String.format("%s - %s - %s \n", userName, TimeUtil.localDateToString(arrivalTime), TimeUtil.localDateToString(arrivalTime));
+        return String.format("%s: %s - %s  à %s \n", userName,
+                TimeUtil.dateToString(arrivalTime),
+                TimeUtil.timeToString(arrivalTime),
+                TimeUtil.timeToString(departureTime));
     }
 }
