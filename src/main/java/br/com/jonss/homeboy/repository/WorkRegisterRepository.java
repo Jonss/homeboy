@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface WorkRegisterRepository extends JpaRepository<WorkRegister, Long> {
-    WorkRegister findTop1ByUserId(String userId);
+    WorkRegister findTopOneByUserIdOrderByArrivalTimeDesc(String userId);
 
     List<WorkRegister> findAllByUserName(String userName);
 }
