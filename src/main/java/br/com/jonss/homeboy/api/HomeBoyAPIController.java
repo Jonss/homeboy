@@ -2,6 +2,7 @@ package br.com.jonss.homeboy.api;
 
 import br.com.jonss.homeboy.model.RegisterType;
 import br.com.jonss.homeboy.model.WorkRegister;
+import br.com.jonss.homeboy.presentation.Presentation;
 import br.com.jonss.homeboy.repository.WorkRegisterRepository;
 import br.com.jonss.homeboy.util.TimeUtil;
 import org.slf4j.Logger;
@@ -61,7 +62,7 @@ public class HomeBoyAPIController {
 
         if(text.equals(XOVE.toString())) {
             List<WorkRegister> allByUserName = workRegisterRepository.findAllByUserName(userName);
-            return allByUserName.toString();
+            return Presentation.presentateWorkRegister(allByUserName);
         }
 
         return "";

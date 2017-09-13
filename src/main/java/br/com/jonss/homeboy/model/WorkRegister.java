@@ -63,9 +63,13 @@ public class WorkRegister {
 
     @Override
     public String toString() {
-        return String.format("%s: %s - %s  à %s \n", userName,
+        return String.format(":house: %s: %s - %s %s \n", userName,
                 TimeUtil.dateToString(arrivalTime),
                 TimeUtil.timeToString(arrivalTime),
-                TimeUtil.timeToString(departureTime));
+                departureTime(departureTime));
+    }
+
+    private String departureTime(LocalDateTime time) {
+        return TimeUtil.hadNotLeave(time) ? "- Saída não registrada": "à " + TimeUtil.timeToString(time);
     }
 }
