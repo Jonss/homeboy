@@ -16,10 +16,14 @@ public class TimeUtil {
     }
 
     public static String timeToString(LocalDateTime localDateTime) {
-        return localDateTime.format(DateTimeFormatter.ofPattern("hh:mm"));
+        return localDateTime.format(DateTimeFormatter.ofPattern("HH:mm"));
     }
 
     public static LocalDateTime januaryAtMidnight() {
         return LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(TimeUtil.timeToString(LocalDateTime.now()));
     }
 }

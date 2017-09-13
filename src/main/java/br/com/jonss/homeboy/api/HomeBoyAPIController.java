@@ -34,7 +34,7 @@ public class HomeBoyAPIController {
         if(!WFH.toString().equals(text) && !FLW.toString().equals(text) && !XOVE.toString().equals(text)) {
             System.out.println(WFH.toString().equals(text));
             System.out.println(FLW.toString().equals(text));
-            return "Não conheço o que você disse, ainda tô aprendendo. Mande WFH ou FLW por favor.";
+            return "Não conheço o que você disse, ainda tô aprendendo. Mande WFH, XOVE ou FLW por favor.";
         }
 
         String userId = paramMap.get("user_id").toString();

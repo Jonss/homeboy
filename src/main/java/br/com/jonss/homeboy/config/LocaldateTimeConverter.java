@@ -15,7 +15,7 @@ public class LocaldateTimeConverter implements AttributeConverter<LocalDateTime,
         calendar.set(Calendar.MONTH, localDateTime.getMonthValue() - 1);
         calendar.set(Calendar.YEAR, localDateTime.getYear());
         calendar.set(Calendar.MINUTE, localDateTime.getMinute());
-        calendar.set(Calendar.HOUR, localDateTime.getHour());
+        calendar.set(Calendar.HOUR_OF_DAY, localDateTime.getHour());
         calendar.set(Calendar.SECOND, localDateTime.getSecond());
         return calendar;
     }
@@ -25,7 +25,7 @@ public class LocaldateTimeConverter implements AttributeConverter<LocalDateTime,
         return LocalDateTime.of(calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH) + 1,
                 calendar.get(Calendar.DAY_OF_MONTH),
-                calendar.get(Calendar.HOUR),
+                calendar.get(Calendar.HOUR_OF_DAY),
                 calendar.get(Calendar.MINUTE),
                 calendar.get(Calendar.SECOND));
     }
