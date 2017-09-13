@@ -23,7 +23,9 @@ public class TimeUtil {
         return LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0);
     }
 
-    public static void main(String[] args) {
-        System.out.println(TimeUtil.timeToString(LocalDateTime.now()));
+    public static boolean hadNotLeave(LocalDateTime localDateTime) {
+        int hour = localDateTime.getHour();
+        int minute = localDateTime.getMinute();
+        return Integer.valueOf(hour).equals(0) && Integer.valueOf(minute).equals(0);
     }
 }
